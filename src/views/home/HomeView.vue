@@ -89,6 +89,11 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
         @media screen and (min-height: 1000px) {
           height: 70%;
         }
+
+        @media screen and (min-height: 1200px) {
+          height: 70%;
+          width: 130%;
+        }
       }
     }
 
