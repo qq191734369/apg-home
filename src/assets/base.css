@@ -1,0 +1,8 @@
+@font-face {
+  font-family: manrope-extrabold;
+  src: url('@/assets/fonts/manrope-extrabold-3.otf');
+}
+
+body {
+  font-family: manrope-extrabold;
+}

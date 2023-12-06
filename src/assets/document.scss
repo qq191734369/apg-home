@@ -1,0 +1,45 @@
+.document {
+  font-family: 'sans serif';
+  padding: 12px 24px;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+section {
+  margin: 20px 0;
+}
+
+p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.sub-p {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+em {
+  font-weight: 700;
+}
+
+table {
+  thead {
+    font-weight: 700;
+  }
+
+  td {
+    border: 1px solid #e8e8e8;
+  }
+}
