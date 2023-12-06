@@ -76,7 +76,7 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
         top: 0;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 900px) {
         height: 100%;
         left: 50%;
         transform: translateX(-50%);
@@ -103,6 +103,7 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
       position: absolute;
       right: 15%;
       top: 50%;
+      z-index: 4;
       transform: translateY(-50%);
       width: 400px;
 
@@ -115,6 +116,20 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
         :deep(.des) {
           font-size: 1.75vw;
         }
+      }
+
+      @media screen and (max-width: 1000px) and (min-height: 1200px) {
+        top: 20px;
+        right: 10%;
+        width: 50%;
+        transform: none;
+      }
+
+      @media screen and (max-width: 1024px) and (max-height: 600px) {
+        top: 20px;
+        right: 10%;
+        width: 200px;
+        transform: none;
       }
     }
   }
