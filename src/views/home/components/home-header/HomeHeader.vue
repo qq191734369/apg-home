@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const state = reactive<{
@@ -11,6 +11,25 @@ const state = reactive<{
 function toggle() {
   state.showMenu = !state.showMenu
 }
+
+function handleResize() {
+  const w = window.document.body.clientWidth
+
+  if (w <= 600) {
+    state.showMenu = false
+  } else {
+    state.showMenu = true
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize)
+  handleResize()
+})
+
+onUnmounted(() => {
+  window.addEventListener('resize', removeEventListener)
+})
 </script>
 
 <template>
@@ -59,6 +78,11 @@ function toggle() {
 
     .more {
       display: none;
+      cursor: pointer;
+    }
+
+    .item-container {
+      display: flex;
     }
 
     .link-item {
@@ -99,6 +123,7 @@ function toggle() {
 
       .item-container {
         position: absolute;
+        display: block;
         top: 30px;
         right: 0;
         z-index: 3;

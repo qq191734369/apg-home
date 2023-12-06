@@ -5,6 +5,7 @@ import CharacterBoard from './components/character-board/CharacterBoard.vue'
 import HomeFooter from './components/home-footer/HomeFooter.vue'
 import ContactUs from './components/contact-us/ContactUs.vue'
 import Logo from './components/Logo/Logo.vue'
+import FlowerBox from './components/flower-box/FlowerBox.vue'
 </script>
 
 <template>
@@ -14,6 +15,8 @@ import Logo from './components/Logo/Logo.vue'
       <CharacterBoard class="boy" />
       <ContactUs class="contact" />
       <Logo class="logo" />
+      <FlowerBox class="flower flower-right" type="right" />
+      <FlowerBox class="flower flower-middle" type="middle" />
     </HomeContainer>
     <HomeFooter class="footer" />
   </div>
@@ -45,6 +48,23 @@ import Logo from './components/Logo/Logo.vue'
   .container {
     flex: 1;
 
+    .flower {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+
+      &.flower-right {
+        width: 250px;
+        left: 5%;
+        transform: rotateY(180deg);
+      }
+
+      &.flower-middle {
+        width: 400px;
+        left: 45%;
+      }
+    }
+
     .boy {
       position: absolute;
       left: 10%;
@@ -65,6 +85,10 @@ import Logo from './components/Logo/Logo.vue'
       @media screen and (max-width: 600px) {
         height: 80%;
         width: 600px;
+
+        @media screen and (min-height: 1000px) {
+          height: 70%;
+        }
       }
     }
 
@@ -72,6 +96,7 @@ import Logo from './components/Logo/Logo.vue'
       position: absolute;
       bottom: 0;
       right: 0;
+      z-index: 4;
     }
 
     .logo {
