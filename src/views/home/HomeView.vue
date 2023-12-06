@@ -71,29 +71,9 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
       bottom: 0;
       z-index: 1;
 
-      @media screen and (max-height: 1000px) and (min-width: 1024px) {
-        bottom: unset;
-        top: 0;
-      }
-
-      @media screen and (max-width: 900px) {
-        height: 100%;
+      @media screen and (max-aspect-ratio: 11 / 10) {
         left: 50%;
         transform: translateX(-50%);
-      }
-
-      @media screen and (max-width: 600px) {
-        height: 80%;
-        width: 600px;
-
-        @media screen and (min-height: 1000px) {
-          height: 70%;
-        }
-
-        @media screen and (min-height: 1200px) {
-          height: 70%;
-          width: 130%;
-        }
       }
     }
 
@@ -111,8 +91,9 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
       z-index: 4;
       transform: translateY(-50%);
       width: 400px;
+      max-width: 600px;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 720px) {
         top: 20px;
         right: 10%;
         width: 50%;
@@ -134,6 +115,13 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
         top: 20px;
         right: 10%;
         width: 200px;
+        transform: none;
+      }
+
+      @media screen and (max-aspect-ratio: 11 / 10) {
+        top: 20px;
+        right: 10%;
+        width: 50%;
         transform: none;
       }
     }
