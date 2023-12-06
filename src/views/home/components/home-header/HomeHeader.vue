@@ -126,7 +126,7 @@ onUnmounted(() => {
         display: block;
         top: 30px;
         right: 0;
-        z-index: 3;
+        z-index: 999;
         background-color: #000;
         padding: 0 10px;
       }
