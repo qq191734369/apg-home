@@ -32,7 +32,7 @@ import FlowerBox from './components/flower-box/FlowerBox.vue'
   .header {
     flex-shrink: 0;
     flex-grow: 0;
-    z-index: 2;
+    z-index: 5;
 
     @media screen and (max-width: 700px) {
       :deep(.title) {
