@@ -5,7 +5,7 @@ import logo from '@/assets/img/home/logo.png'
 <template>
   <div class="logo">
     <img :src="logo" />
-    <div class="des">THE ONE AND ONLY YOUR AY BOYFRIEND</div>
+    <div class="des">THE ONE AND ONLY YOUR AI BOYFRIEND</div>
   </div>
 </template>
 
